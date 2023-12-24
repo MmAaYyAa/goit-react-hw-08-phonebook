@@ -8,7 +8,7 @@ const initialState = {
 
 };
 
-export const authSlice = createSlice({
+ const authSlice = createSlice({
     name: 'auth',
     initialState,
     extraReducers: builder => {
@@ -37,4 +37,6 @@ export const authSlice = createSlice({
             state.error = action.payload;
         })
     }
-})
+});
+
+export const authReducer = authSlice.reducer;

@@ -14,7 +14,7 @@ const clearAuthHeader = () => {
   };
 
   
-//   POST @ /users/signup
+//   POST /users/signup
 //  body: { name, email, password } - credentials
   export const register = createAsyncThunk(
     'auth/register',
@@ -31,8 +31,8 @@ const clearAuthHeader = () => {
     }
   )
 
-//   POST @ /users/login
-//  body: { email, password }
+//   POST /users/login
+//  body: { email, password } - credentials
 export const logIn = createAsyncThunk(
     'auth/login',
     async (credentials, thunkAPI) => {
