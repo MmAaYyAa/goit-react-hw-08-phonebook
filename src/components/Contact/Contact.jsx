@@ -8,7 +8,7 @@ const Contact = ({ contact }) => {
   return (
     <ContactItem>
       <li>
-        {contact.name}: {contact.phone}
+        {contact.name}: {contact.number}
       </li>
       <DeleteButton type="button" onClick={handleDelete}>
         Delete

@@ -4,7 +4,7 @@ import { getFilter } from '../../redux/selectors';
 import { FilterText, FilterForm, FilterTitle } from './Filter.styled';
 import { Input } from '../ContactForm/ContactForm.styled';
 
-const Filter = () => {
+export const Filter = () => {
   const {filter} = useSelector(getFilter);
   const dispatch = useDispatch();
   const handleFilter =  ({ target: { value } })  => {

@@ -11,18 +11,18 @@ import {
 
  export const ContactForm = ()=> {
   const[name,setName]= useState('');
-  const[phone,setPhone]= useState('');
+  const[number,setNumber]= useState('');
   const contacts = useSelector(getContacts );
   const dispatch = useDispatch();
 
   const handleInputChange = event => {
     if(event.target.name === 'name') setName(event.target.value.trim());
-    if(event.target.name === 'phone') setPhone(event.target.value.trim());
+    if(event.target.name === 'number') setNumber(event.target.value.trim());
   };
 
   const handleFormSubmit = event => {
     event.preventDefault();
-   const dataForm = {name: name, phone: phone};
+   const dataForm = {name: name, number: number};
    const existingContact = contacts.find(
           contact => contact.name.toLowerCase() === dataForm.name.toLowerCase()
          );
@@ -31,7 +31,7 @@ import {
         }
         dispatch(addContacts(dataForm));
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
     return (
@@ -55,9 +55,9 @@ import {
             <Input
               onChange={handleInputChange}
               type="tel"
-              name="phone"
+              name="number"
               placeholder="Enter phone number"
-              value={phone}
+              value={number}
               pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
               required
             ></Input>
