@@ -1,8 +1,9 @@
+import {Title, Container} from './Home.styled'
 export default function Home() {
     return (
-    <div>
-        <h1>Your Phonebook</h1>
-    </div>
+    <Container>
+        <Title>Your Phonebook</Title>
+    </Container>
 );
 }
 

@@ -1,15 +1,15 @@
 import { useDispatch } from 'react-redux';
 import { deleteContacts } from '../../redux/api';
-import { ContactItem, DeleteButton } from '../Contact/Contact.styled';
+import { LiItem, ContactItem, DeleteButton } from '../Contact/Contact.styled';
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContacts(contact.id));
   return (
     <ContactItem>
-      <li>
+      <LiItem>
         {contact.name}: {contact.number}
-      </li>
+      </LiItem>
       <DeleteButton type="button" onClick={handleDelete}>
         Delete
       </DeleteButton>
