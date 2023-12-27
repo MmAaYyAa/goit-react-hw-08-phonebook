@@ -6,7 +6,8 @@ import {Filter} from '../../components/Filter/Filter';
 import { fetchContacts } from '../../redux/api';
 import {selectIsLoading} from '../../redux/selectors';
 import {selectError} from '../../redux/selectors';
-import {Container} from './Contacts.styled';
+import {Container, ErrorMessage} from './Contacts.styled';
+import Loader from 'components/Loader/Loader';
 
 export default function Contacts () {
     const dispatch = useDispatch();
@@ -20,7 +21,8 @@ export default function Contacts () {
         <Container>
            <ContactForm />
            <Filter />
-           <div>{isLoading && 'Request in progress...'}</div>
+           {isLoading &&  <Loader />}
+           {error && <ErrorMessage>Oops... Error: {error}</ErrorMessage>}
            <ContactsList />
 
         </Container>

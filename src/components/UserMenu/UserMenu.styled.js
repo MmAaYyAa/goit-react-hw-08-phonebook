@@ -18,8 +18,8 @@ display: flex;
     width: 80px;
     padding: 4px 10px;
     background-color : #3baea0;
-    color: #f8fcfb;
-    border-radius: 3px;
+    color: #475053;
+    border-radius: 4px;
     border: 1px solid #ddeedf;
     &:hover {
       outline: none;

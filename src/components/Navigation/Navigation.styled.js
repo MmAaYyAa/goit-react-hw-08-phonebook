@@ -10,7 +10,7 @@ export const StyledLink = styled(NavLink)`
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #004445;
-  &:active {
+  &.active {
   color: #118a7e;
   
 }

@@ -9,3 +9,6 @@ padding: 20px 0 20px 0;
   align-items: center;
   color: #010101;`
 
+  export const ErrorMessage = styled.p`
+  color: #f23557;`
+
